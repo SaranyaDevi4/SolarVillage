@@ -20,13 +20,13 @@ This project is developed using Process Automation Engine 7 (PAM7) where we can 
 * **username**: test_database
 * **password**: asdf123
 
--	clone the repo for SolarVillage Project and clone the repo for [GovernmentPermit] (https://github.com/SaranyaDevi4/GovermentPermit)
+-	clone the repo for SolarVillage Project and clone the repo for [GovernmentPermit](https://github.com/SaranyaDevi4/GovermentPermit).
 -	Build and deploy the SolarVillage project with kie-container creation)
 -	Build the Government Permit project and start using
 -	Java –jar GovernmentPermit.jar  (or) mvn spring-boot:run
-Test the project:
+## Test the project:
 -	If you use the container name with the same name of the project GAV, (i.e SolarVillage_3.0.13) you will be able to see in Business Central, all the process instances and tasks created created by Kie Server.
-Kie Server REST API:
+## Kie Server REST API:
 -	Headers to use with POST and PUT (Auth required, you can use i.e JBPM user): Accept:application/json Content-Type:application/json
 
 - **To Start Process Instance:(will get processinstance id): (POST method)**
