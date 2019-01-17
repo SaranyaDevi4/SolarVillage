@@ -30,7 +30,9 @@ Kie Server REST API:
 -	Headers to use with POST and PUT (Auth required, you can use i.e JBPM user): Accept:application/json Content-Type:application/json
 
 - **To Start Process Instance:(will get processinstance id): (POST method)**
+
 http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.0.13/processes/SolarVillage.neworderpermitting/instances
+
 {
   "newOrder": {
     "com.myspace.solarvillage.NewOrder": {
@@ -43,14 +45,14 @@ http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.
   }
 }
 
--**List available tasks for potential owners : (here we can see the tasks with task id and the owners and groups)**
+- **List available tasks for potential owners : (here we can see the tasks with task id and the owners and groups)**
 http://localhost:8080//kie-server/services/rest/server/queries/tasks/instances/pot-owners
--**Salesman approval from sales department group to accept the HOA meeting**
--**Claim task  with taskinstance id for own user ( I am JBPM user) (PUT method)**
+- **Salesman approval from sales department group to accept the HOA meeting**
+- **Claim task  with taskinstance id for own user ( I am JBPM user) (PUT method)**
 http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.0.13/tasks/{taskinstanceid}/states/claimed?user=jbpm
--**Start task  with taskinstance id for own user ( I am JBPM user)(PUT method)**
+- **Start task  with taskinstance id for own user ( I am JBPM user)(PUT method)**
 http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.0.13/tasks/{taskinstanceid}/states/started?user=jbpm
--**Complete task  with taskinstance id for own user ( I am JBPM user)(PUT Method)**
+- **Complete task  with taskinstance id for own user ( I am JBPM user)(PUT Method)**
 http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.0.13/tasks/{taskinstanceid}/states/completed?user=jbpm
 
 
@@ -65,7 +67,7 @@ http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.
     }
   }
 }
--**After 30 S,HOA meeting will happen.here,the task will be waiting to get approval from HOA group
+- **After 30 S,HOA meeting will happen.here,the task will be waiting to get approval from HOA group
 So repeat the steps to claim and start the process as a jbpm user)**
 •	http://localhost:8080//kie-server/services/rest/server/queries/tasks/instances/pot-owners
 
