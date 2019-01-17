@@ -20,7 +20,7 @@ This project is developed using Process Automation Engine 7 (PAM7) where we can 
 * **username**: test_database
 * **password**: asdf123
 
--	clone the repo
+-	clone the repo for SolarVillage Project and clone the repo for [GovernmentPermit] (https://github.com/SaranyaDevi4/GovermentPermit)
 -	Build and deploy the SolarVillage project with kie-container creation)
 -	Build the Government Permit project and start using
 -	Java –jar GovernmentPermit.jar  (or) mvn spring-boot:run
