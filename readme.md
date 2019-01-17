@@ -1,18 +1,18 @@
 # Solar Village
 This project is developed using Process Automation Engine 7 (PAM7) where we can send and process the order request, get the approval from government Agencies and complete the request.
-##Main features:
+## Main features:
 •	Process the new order request
 •	Get Approval from HOA (using human task i.e.,we can claim the task by using an admin role)
 •	After approval,parallel process will happen to send and persists permit requests(webservices developed using spring-boot.The webservice process also contains the service to check the database for any of the pending task and approve that.)
 •	If approved,the process will be completed.
 •	If denied,the rollback of data will happen.
-##Prereqs:
+## Prereqs:
 •	Java
 •	Maven
 •	PAM7 with kie server
 •	Oracle database
 •	Springboot project(GovernmentPermit)
-##Installation:
+## Installation:
 •	Install PAM7 and kie server ( I have a JBPM)
 •	Configure database with following details(for springboot project)(change the configuration as you need in application-properties)
 
@@ -29,7 +29,7 @@ Test the project:
 Kie Server REST API:
 •	Headers to use with POST and PUT (Auth required, you can use i.e JBPM user): Accept:application/json Content-Type:application/json
 
-**To Start Process Instance:(will get processinstance id): (POST method) **
+** To Start Process Instance:(will get processinstance id): (POST method) **
 http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.0.13/processes/SolarVillage.neworderpermitting/instances
 {
   "newOrder": {
@@ -43,7 +43,7 @@ http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.
   }
 }
 
-**List available tasks for potential owners : (here we can see the tasks with task id and the owners and groups)**
+** List available tasks for potential owners : (here we can see the tasks with task id and the owners and groups)**
 http://localhost:8080//kie-server/services/rest/server/queries/tasks/instances/pot-owners
 **Salesman approval from sales department group to accept the HOA meeting
 •	Claim task  with taskinstance id for own user ( I am JBPM user) (PUT method) **
