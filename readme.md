@@ -1,35 +1,35 @@
 # Solar Village
 This project is developed using Process Automation Engine 7 (PAM7) where we can send and process the order request, get the approval from government Agencies and complete the request.
 ## Main features:
-•	Process the new order request
-•	Get Approval from HOA (using human task i.e.,we can claim the task by using an admin role)
-•	After approval,parallel process will happen to send and persists permit requests(webservices developed using spring-boot.The webservice process also contains the service to check the database for any of the pending task and approve that.)
-•	If approved,the process will be completed.
-•	If denied,the rollback of data will happen.
+*•	Process the new order request
+*•	Get Approval from HOA (using human task i.e.,we can claim the task by using an admin role)
+*•	After approval,parallel process will happen to send and persists permit requests(webservices developed using spring-boot.The webservice process also contains the service to check the database for any of the pending task and approve that.)
+*•	If approved,the process will be completed.
+*•	If denied,the rollback of data will happen.
 ## Prereqs:
-•	Java
-•	Maven
-•	PAM7 with kie server
-•	Oracle database
-•	Springboot project(GovernmentPermit)
+*•	Java
+*•	Maven
+*•	PAM7 with kie server
+*•	Oracle database
+*•	Springboot project(GovernmentPermit)
 ## Installation:
-•	Install PAM7 and kie server ( I have a JBPM)
-•	Configure database with following details(for springboot project)(change the configuration as you need in application-properties)
+*•	Install PAM7 and kie server ( I have a JBPM)
+*•	Configure database with following details(for springboot project)(change the configuration as you need in application-properties)
 
-**url**     :  jdbc:oracle:thin:@localhost:1521:xe
-**username**: test_database
-**password**: asdf123
+* **url**     :  jdbc:oracle:thin:@localhost:1521:xe
+* **username**: test_database
+* **password**: asdf123
 
-•	clone the repo
-•	Build and deploy the SolarVillage project with kie-container creation)
-•	Build the Government Permit project and start using
-•	Java –jar GovernmentPermit.jar  (or) mvn spring-boot:run
+*•	clone the repo
+*•	Build and deploy the SolarVillage project with kie-container creation)
+*•	Build the Government Permit project and start using
+*•	Java –jar GovernmentPermit.jar  (or) mvn spring-boot:run
 Test the project:
-•	If you use the container name with the same name of the project GAV, (i.e SolarVillage_3.0.13) you will be able to see in Business Central, all the process instances and tasks created created by Kie Server.
+*•	If you use the container name with the same name of the project GAV, (i.e SolarVillage_3.0.13) you will be able to see in Business Central, all the process instances and tasks created created by Kie Server.
 Kie Server REST API:
-•	Headers to use with POST and PUT (Auth required, you can use i.e JBPM user): Accept:application/json Content-Type:application/json
+*•	Headers to use with POST and PUT (Auth required, you can use i.e JBPM user): Accept:application/json Content-Type:application/json
 
-** To Start Process Instance:(will get processinstance id): (POST method) **
+* **To Start Process Instance:(will get processinstance id): (POST method)**
 http://localhost:8080/kie-server/services/rest/server/containers/SolarVillage_3.0.13/processes/SolarVillage.neworderpermitting/instances
 {
   "newOrder": {
